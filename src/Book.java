@@ -9,12 +9,18 @@ public class Book {
         this.dateRelease = dateRelease;
     }
 
+    public Book(String titleBook, int dateRelease) {
+        this.titleBook = titleBook;
+        Author author = new Author(null, null);
+        this.dateRelease = dateRelease;
+    }
+
     public String getTitleBook() {
         return titleBook;
     }
 
-    public Author getAuthor() {
-        return author;
+    public String getAuthor() {
+        return author.getFullName();
     }
 
     public int getDateRelease() {
