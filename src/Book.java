@@ -1,24 +1,20 @@
 public class Book {
     private String titleBook;
-    private String nameAuthor;
+    Author author;
     private int dateRelease;
 
-    public Book(String titleBook, String nameAuthor, int dateRelease) {
+    public Book(String titleBook, Author author, int dateRelease) {
         this.titleBook = titleBook;
-        this.nameAuthor = nameAuthor;
+        this.author = author;
         this.dateRelease = dateRelease;
-    }
-
-    public Book(String titleBook, int dateRelease) {
-        this(titleBook, "The author is unknown", dateRelease);
     }
 
     public String getTitleBook() {
         return titleBook;
     }
 
-    public String getNameAuthor() {
-        return nameAuthor;
+    public Author getAuthor() {
+        return author;
     }
 
     public int getDateRelease() {
