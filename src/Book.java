@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Book {
     private String titleBook;
-    Author author;
+    private Author author;
     private int dateRelease;
 
     public Book(String titleBook, Author author, int dateRelease) {
@@ -44,11 +44,11 @@ public class Book {
             return false;
         }
         Book newBook = (Book) other;
-        return titleBook.equals(newBook.titleBook);
+        return titleBook.equals(newBook.titleBook) && author.equals(newBook.author) && dateRelease == newBook.dateRelease;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titleBook);
+        return Objects.hash(titleBook, author, dateRelease);
     }
 }
