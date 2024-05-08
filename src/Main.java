@@ -7,5 +7,8 @@ public class Main {
         Book harryPotterOne = new Book("Harry Potter and the Philosopher's Stone", rowlingJoanne, 1997);
         Book aSongOfIceAndFireOne = new Book("A Game of Thrones", martinGeorge, 1991);
         aSongOfIceAndFireOne.setDateRelease(1996);
+
+        System.out.println(rowlingJoanne.toString());
+        System.out.println(harryPotterOne.toString());
     }
 }
